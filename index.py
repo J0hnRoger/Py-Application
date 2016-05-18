@@ -1,4 +1,6 @@
 import Tkinter as tk
+from ttk import *
+
 from Pages.HomePage import HomePage
 from Pages.SubscribePage import SubscribePage
 from Pages.AllUsersPage import AllUsersPage
