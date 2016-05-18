@@ -1,9 +1,9 @@
 import Tkinter as tk
 from ttk import *
 
-from Pages.HomePage import HomePage
-from Pages.SubscribePage import SubscribePage
-from Pages.AllUsersPage import AllUsersPage
+from Core.Pages.HomePage import HomePage
+from Core.Pages.SubscribePage import SubscribePage
+from Core.Pages.AllUsersPage import AllUsersPage
 
 class LoveMachineApp(tk.Tk):
     def __init__(self):
