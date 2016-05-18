@@ -1,18 +1,20 @@
+"""
+    Service for interact with MySQL DB
+    Usage : from MySqlService import MySqlService
+            db = MySqlService("localhost", "root", "")
+            db.insert("Utilisateurs", nom="Doe", prenom="John", Age=25)
+            db.selectAll("Utilisateurs")
+"""
 import MySQLdb
 
 class MySqlService(object):
-    """
-        Service for interact with MySQL DB
-        Usage : from MySqlService import MySqlService
-                db = MySqlService("localhost", "root", "")
-                db.insert("Utilisateurs", nom="Doe", prenom="John", Age=25)
-                db.selectAll("Utilisateurs")
-    """
+
     __connection = None
     __version = None
 
-    def __init__(self, hostname, username, mdp):
+    def __init__(self):
         super(MySqlService, self).__init__()
+        #TODO - Add credentials in parameters
         self.__connection = MySQLdb.connect(host="localhost", user="root", passwd="", db="lmdb")
         cur = self.__connection.cursor()
         self.__version = cur.execute("SELECT VERSION()")

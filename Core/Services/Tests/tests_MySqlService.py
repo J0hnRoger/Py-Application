@@ -1,7 +1,6 @@
 import unittest
 from MySqlService import MySqlService
 
-
 class MySqlServiceTests(unittest.TestCase):
     __db = None
     def setUp(cls):
