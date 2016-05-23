@@ -10,7 +10,9 @@ class UsersService(object):
         self.db = MySqlService()
 
     def saveUser(self, user):
-        print "TODO - Boss un peu :D - User Saved!"
+        self.db.insert(self.USERS_TABLE_NAME, nom=user.Name, prenom=user.FirstName, age=user.Age )
+        user.toString()
+        print "User Saved!"
 
     def getAllUsers(self):
-        print " TODO - Boss un peu :D - Return All Users"
+        return self.db.selectAll(self.USERS_TABLE_NAME)

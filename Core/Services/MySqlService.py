@@ -56,7 +56,7 @@ class MySqlService(object):
                     query += ","
         query += 'FROM %s' % table
         cur = self.__connection.cursor()
-        print query
+
         cur.execute(query)
         number_rows = cur.rowcount
         number_columns = len(cur.description)
